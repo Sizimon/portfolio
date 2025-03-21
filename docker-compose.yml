@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  portfolio:
+    image: shhmon/my-react-app:latest
+    container_name: portfolio
+    ports:
+      - "5001:5000"
+    environment:
+      - NODE_ENV=production
+
+  bot-dashboard:
+    image: shhmon/bot-dashboard:latest
+    container_name: bot-dashboard
+    ports:
+      - "5002:5000"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - bot-backend
+      - bot-database
+
+  bot-backend:
+    image: shhmon/bot-backend:latest
+    container_name: bot-backend
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_HOST=bot-database
+      - DB_NAME=${DB_NAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_PORT=5432
+      - SECRET_KEY=${SECRET_KEY}
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+    ports:
+      - "5003:5003"
+    depends_on:
+      bot-database:
+        condition: service_healthy
+
+  bot-database:
+    image: postgres:13
+    container_name: bot-database
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - /home/ec2-user/PORTFOLIO-REACT/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  
+  weather-app:
+    image: shhmon/weather-api:latest
+    container_name: weather-app
+    ports:
+      - "5004:5000"
+    environment:
+      - NODE_ENV=production
+volumes:
+  pgdata:

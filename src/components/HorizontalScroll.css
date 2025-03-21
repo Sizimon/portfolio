@@ -1,0 +1,14 @@
+.slick-dots li button:before {
+  color: #ECDFCC;
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #697565; 
+}
+
+/* PREVENT SCROLL */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
