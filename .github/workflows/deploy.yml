@@ -28,7 +28,7 @@ jobs:
       - name: Deploy services
         run: |
           ssh -i ec2-key.pem -o StrictHostKeyChecking=no ec2-user@${{ secrets.EC2_IP }} "
-          cd /home/ec2-user/PORTFOLIO-REACT &&
+          cd /home/ec2-user/portfolio &&
           docker-compose down &&
           docker-compose pull &&
           docker-compose up -d"
