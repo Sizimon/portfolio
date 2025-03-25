@@ -52,6 +52,8 @@ services:
   weather-app:
     image: shhmon/weather-api:latest
     container_name: weather-app
+    environment:
+      - REACT_APP_WEATHER_API_KEY=${REACT_APP_WEATHER_API_KEY}
     env_file:
       - .env
     ports:
