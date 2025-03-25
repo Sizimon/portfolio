@@ -8,14 +8,16 @@ services:
       - "5001:5000"
     environment:
       - NODE_ENV=production
+    env_file:
+      - .env
 
   bot-dashboard:
     image: shhmon/bot-dashboard:latest
     container_name: bot-dashboard
     ports:
       - "5002:5000"
-    environment:
-      - NODE_ENV=production
+    env_file:
+      - .env
     depends_on:
       - bot-backend
       - bot-database
@@ -23,14 +25,8 @@ services:
   bot-backend:
     image: shhmon/bot-backend:latest
     container_name: bot-backend
-    environment:
-      - DB_USER=${DB_USER}
-      - DB_HOST=bot-database
-      - DB_NAME=${DB_NAME}
-      - DB_PASSWORD=${DB_PASSWORD}
-      - DB_PORT=5432
-      - SECRET_KEY=${SECRET_KEY}
-      - DISCORD_TOKEN=${DISCORD_TOKEN}
+    env_file:
+      - .env
     ports:
       - "5003:5003"
     depends_on:
@@ -58,6 +54,8 @@ services:
   weather-app:
     image: shhmon/weather-api:latest
     container_name: weather-app
+    env_file:
+      - .env
     ports:
       - "5004:5000"
     environment:
