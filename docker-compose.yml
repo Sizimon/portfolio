@@ -6,8 +6,6 @@ services:
     container_name: portfolio
     ports:
       - "5001:5000"
-    environment:
-      - NODE_ENV=production
     env_file:
       - .env
 
@@ -58,7 +56,5 @@ services:
       - .env
     ports:
       - "5004:5000"
-    environment:
-      - NODE_ENV=production
 volumes:
   pgdata:
