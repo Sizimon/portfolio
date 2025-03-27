@@ -1,3 +1,9 @@
 UPDATE:
+    BOT-BACKEND:
+
     BOT-DASHBOARD:
-        FIX: Icon Size
+        FEAT: Edit Home.js to create a better landing page.
+
+    PORTFOLIO:
+
+    WEATHER-APP:
