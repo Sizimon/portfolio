@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-        FEAT: Edit Home.js to create a better landing page.
+        FIX: Wrong column span.
 
     PORTFOLIO:
 
