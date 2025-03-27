@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-        FIX: Pathing Error
+        FIX: Pathing Error!
 
     PORTFOLIO:
 
