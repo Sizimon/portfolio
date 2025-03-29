@@ -1,9 +1,10 @@
 UPDATE:
     BOT-BACKEND:
+        FEAT: Switch out hardcoded admin role for dynamic, refactor accordingly.
+        FEAT: Increase additional role count to 30.
 
     BOT-DASHBOARD:
-        FIX: Stop propagation did not work as intended, attempting another fix.
-        
+
     PORTFOLIO:
 
     WEATHER-APP:
