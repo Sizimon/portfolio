@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-        FIX: Accidentally used ES6 import instead of CommonJS
+        FIX: Wrong import on db.js
 
     BOT-DASHBOARD:
 
