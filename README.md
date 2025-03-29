@@ -1,9 +1,9 @@
 UPDATE:
     BOT-BACKEND:
-        FIX: Wrong import on db.js
 
     BOT-DASHBOARD:
-
+        FIX: Stop propagation did not work as intended, attempting another fix.
+        
     PORTFOLIO:
 
     WEATHER-APP:
