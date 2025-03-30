@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-        FIX: Typo setup.js line 44.
+        FIX: Wrong id tag in query on line 67 (fix this so that all tables use guild_id when referring to guild_id EVEN THE GUILDS TABLE)
 
     BOT-DASHBOARD:
 
