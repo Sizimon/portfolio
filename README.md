@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-       FEAT: Alter the color section to set choice to eliminate contrast issues.
+       FEAT: Seperate additional roles from setup to reduce clutter. Now there is a new addRoles / command.
 
     BOT-DASHBOARD:
 
