@@ -1,10 +1,11 @@
 UPDATE:
     BOT-BACKEND:
-        FEAT: Switch out hardcoded admin role for dynamic, refactor accordingly.
-        FEAT: Increase additional role count to 30.
+        FIX: Too many additional roles, discord API only allows 25 commands, as a maximum.
 
     BOT-DASHBOARD:
 
     PORTFOLIO:
+        Deploy.yml:
+            Add image pruning after compose to prevent exceeding storage limits on ec2.
 
     WEATHER-APP:

@@ -43,4 +43,5 @@ jobs:
           echo 'REACT_APP_WEATHER_API_KEY=${{ secrets.REACT_APP_WEATHER_API_KEY }}' >> .env &&
           docker-compose down &&
           docker-compose pull &&
-          docker-compose up -d"
+          docker-compose up -d &&
+          docker image prune -a" 
