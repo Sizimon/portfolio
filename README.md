@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-       FIX: Wrong name in setName() on add roles.
+       FIX: setDescrtiption() for icon was too long, must be below 100 chars.
 
     BOT-DASHBOARD:
 
