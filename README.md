@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Change db connections to use db/utils
+      FIX: Typo.
 
     BOT-DASHBOARD:
 
