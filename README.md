@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FIX: Test to see if converting selectedEventId to a number fixes undefined issue.
+      FIX: Log event handling in partymaker to debug error.
 
     PORTFOLIO:
 
