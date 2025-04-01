@@ -1,8 +1,8 @@
 UPDATE:
     BOT-BACKEND:
+      FIX: Change db connections to use db/utils
 
     BOT-DASHBOARD:
-      FIX: Debugging for partymaker.
 
     PORTFOLIO:
 
