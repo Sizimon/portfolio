@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Typo.
+      FIX: Debuging partymaker.
 
     BOT-DASHBOARD:
 
