@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FIX: Typos.
+      FEAT: Refactored components into sub components for ease of readability.
 
     PORTFOLIO:
 
