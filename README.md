@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Debuging partymaker.
+      FIX: Debuging partymaker
 
     BOT-DASHBOARD:
 
