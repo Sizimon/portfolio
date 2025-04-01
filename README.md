@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-       FIX: setDescrtiption() for icon was too long, must be below 100 chars.
+       FIX: required being set to true causes user to HAVE to input max number of roles
 
     BOT-DASHBOARD:
 
