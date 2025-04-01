@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-       FIX: Add some logging to figure out what is going wrong with the command.
+       FIX: Forgot to add addRoles to interactionCreate handler
 
     BOT-DASHBOARD:
 
