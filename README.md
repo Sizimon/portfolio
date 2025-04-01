@@ -1,6 +1,7 @@
 UPDATE:
     BOT-BACKEND:
-       FIX: required being set to true causes user to HAVE to input max number of roles
+       FIX: add reply to addRoles at beginning to avoid timeout, also alter the start of the setup.js interaction message!
+       FEAT: Edit the setup.js message to fix undefined additional roles, and edit the description for more clarity.
 
     BOT-DASHBOARD:
 
