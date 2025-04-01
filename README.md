@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FEAT: Refactored components into sub components for ease of readability.
+      FIX: Debugging for partymaker.
 
     PORTFOLIO:
 
