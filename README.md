@@ -1,9 +1,10 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Debuging partymaker
 
     BOT-DASHBOARD:
-
+      FIX: console log eventsResponse. 
+      FIX: MenuButton was not being passed active.
+      
     PORTFOLIO:
 
     WEATHER-APP:
