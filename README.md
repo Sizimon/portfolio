@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Did not use editReply which caused an error.
+      FIX: Modal title was too long.
 
     BOT-DASHBOARD:
 
