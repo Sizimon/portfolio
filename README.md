@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FIX: Typewriter start point debugging.
+      FEAT: Override default select element styling.
 
     PORTFOLIO:
 
