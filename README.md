@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Modal title was too long.
+      FIX: Reply was causing modal to not pop up.
 
     BOT-DASHBOARD:
 
