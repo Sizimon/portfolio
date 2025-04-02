@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FEAT: Override default select element styling.
+      FEAT: Create custom dropdown instead of default select element.
 
     PORTFOLIO:
 
