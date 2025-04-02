@@ -41,6 +41,7 @@ jobs:
           echo 'DB_PASSWORD=${{ secrets.DB_PASSWORD }}' >> .env &&
           echo 'DB_PORT=${{ secrets.DB_PORT }}' >> .env &&
           echo 'REACT_APP_WEATHER_API_KEY=${{ secrets.REACT_APP_WEATHER_API_KEY }}' >> .env &&
+          docker image prune -a &&
           docker-compose down &&
           docker-compose pull &&
           docker-compose up -d &&
