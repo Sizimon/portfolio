@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FIX: Typewriter start point debugging.
+      FIX: Typewriter start point debugging!
 
     PORTFOLIO:
 
