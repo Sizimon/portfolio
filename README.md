@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FIX: Import Typo
+      FEAT: Optimise dropdown interaction.
 
     PORTFOLIO:
 
