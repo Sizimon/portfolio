@@ -1,9 +1,8 @@
 UPDATE:
     BOT-BACKEND:
-      FEAT: Alter event embed appearance
 
     BOT-DASHBOARD:
-      FIX: check if preset.data actually needs to be parsed before parsing
+      FEAT: Alter event selection styling to add hover effect, add header above event selection, alter spacings.
 
     PORTFOLIO:
 
