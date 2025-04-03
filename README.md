@@ -1,9 +1,8 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Alter event_attendance validation message. Add logging to check data returned by loadEventUserData.
 
     BOT-DASHBOARD:
-      TEST: Attempt to see why eventUserData is null
+      FIX: Alter createParties() logic in order to fix unpopulated eventUserData
 
     PORTFOLIO:
 
