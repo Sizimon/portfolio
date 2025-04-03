@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Set gameName.name instead of gameName obj
+      FIX: changed reply to editReply in createEvent
 
     BOT-DASHBOARD:
 
