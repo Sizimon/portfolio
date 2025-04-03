@@ -1,8 +1,8 @@
 UPDATE:
     BOT-BACKEND:
+      TEST: Check the eventUserData is populated correctly
 
     BOT-DASHBOARD:
-      TEST: Add some logging to find why createParties is not working as intended.
 
     PORTFOLIO:
 
