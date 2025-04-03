@@ -1,8 +1,8 @@
 UPDATE:
     BOT-BACKEND:
+      FIX: Change to user based index on the modal to avoid indexing conflicts
 
     BOT-DASHBOARD:
-      FEAT: Alter event selection styling to add hover effect, add header above event selection, alter spacings.
 
     PORTFOLIO:
 
