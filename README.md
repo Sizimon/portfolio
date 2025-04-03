@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FEAT: Add validation to check that the user has the correct game role to respond to the event.
+      FIX: Count was attempting to grab the text input values based on an array based index whereas I changed the indexing to a user based index starting from 1.
 
     BOT-DASHBOARD:
 
