@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Add some error handling to catch the modal error
+      FIX: Additional Logging.
 
     BOT-DASHBOARD:
 
