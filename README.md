@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Add defer reply to modal submission.
+      FIX: Consolodate all modal interactions into one submission
 
     BOT-DASHBOARD:
 
