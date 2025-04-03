@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: replace type with gameName on eventEmbed, fixed iterations to start at 1.
+      FIX: Set gameName.name instead of gameName obj
 
     BOT-DASHBOARD:
 
