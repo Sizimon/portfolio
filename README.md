@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      TEST: Check the eventUserData is populated correctly.
+      FIX: Fetched before init
 
     BOT-DASHBOARD:
 
