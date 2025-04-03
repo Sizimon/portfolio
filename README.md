@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Consolodate all modal interactions into one submission
+      FIX: replace type with gameName on eventEmbed, fixed iterations to start at 1.
 
     BOT-DASHBOARD:
 
