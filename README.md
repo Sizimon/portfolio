@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Reply was causing modal to not pop up
+      FIX: Add some error handling to catch the modal error
 
     BOT-DASHBOARD:
 
