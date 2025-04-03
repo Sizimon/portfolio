@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Change to user based index on the modal to avoid indexing conflicts
+      FEAT: Add validation to check that the user has the correct game role to respond to the event.
 
     BOT-DASHBOARD:
 
