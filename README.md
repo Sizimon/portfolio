@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FIX: App rendering before auth is set, which causes token loss.
+      FIX: Typo in route on line 31
 
     PORTFOLIO:
 
