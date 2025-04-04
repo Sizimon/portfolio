@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FIX: Token not persisting across refresh, test fix.
+      FIX: App rendering before auth is set, which causes token loss.
 
     PORTFOLIO:
 
