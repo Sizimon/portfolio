@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FEAT: Alter party box bg color
+      FIX: Token not persisting across refresh, test fix.
 
     PORTFOLIO:
 
