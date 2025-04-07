@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Include the folder where the image is located.
+      FIX: Set query result to const result
 
     BOT-DASHBOARD:
 
