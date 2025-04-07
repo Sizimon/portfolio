@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FEAT: Add correct user response for if user adds role which already exists.
+      FEAT: Altered user message structure for addRoles
 
     BOT-DASHBOARD:
 
