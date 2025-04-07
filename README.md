@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      REVERT: Revent auth validation to test if fixed.
+      FIX: Still issues try reverting
 
     PORTFOLIO:
 
