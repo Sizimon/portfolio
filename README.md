@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FIX: Stale auth values in localStorage could be causing wrong routing
+      REVERT: Revent auth validation to test if fixed.
 
     PORTFOLIO:
 
