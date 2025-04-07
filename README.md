@@ -1,8 +1,8 @@
 UPDATE:
     BOT-BACKEND:
-      FEAT: Altered user message structure for addRoles.
 
     BOT-DASHBOARD:
+      FIX: Stale auth values in localStorage could be causing wrong routing
 
     PORTFOLIO:
 
