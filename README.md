@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Set query result to const result
+      FEAT: Add correct user response for if user adds role which already exists.
 
     BOT-DASHBOARD:
 
