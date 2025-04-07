@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Parse image_urls before extracting.
+      FIX: Include the folder where the image is located.
 
     BOT-DASHBOARD:
 
