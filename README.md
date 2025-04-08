@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FIX: Somehow react-router-dom updated itself which caused the dependancy clash, reverted to more stable version.
+      FEAT: Fix localStorage clearing correctly, by comparing currentDate to token Expiry date.
 
     PORTFOLIO:
 
