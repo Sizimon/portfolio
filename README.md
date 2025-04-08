@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FEAT: Change error message color
+      FEAT: Comment out console.logs to remove console clutter.
 
     PORTFOLIO:
 
