@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import Taskmanager_1 from '../assets/image/Taskmanager.png';
 import Taskmanager_2 from '../assets/image/Taskmanager_2.png';

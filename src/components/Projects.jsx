@@ -1,5 +1,4 @@
 import React from 'react';
-import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import HorizontalScroll from './HorizontalScroll';
 

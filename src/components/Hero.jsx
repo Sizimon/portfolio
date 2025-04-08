@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 
 import { FaReact, FaNode, FaJs, FaAws, FaDocker } from "react-icons/fa6"
 import { DiPostgresql } from "react-icons/di"
-import { IoCaretDown } from 'react-icons/io5'
 
 /* MAIN SECTION */
 
@@ -22,20 +21,20 @@ const animVariant = (delay, initialPosition) => ({
         },
     },
 });
-const animVariant2 = (delay, initialPosition) => ({
-    hidden: {
-        opacity: 0,
-        x: initialPosition,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {
-            duration: 0.5,
-            delay: delay,
-        },
-    },
-});
+// const animVariant2 = (delay, initialPosition) => ({
+//     hidden: {
+//         opacity: 0,
+//         x: initialPosition,
+//     },
+//     visible: {
+//         x: 0,
+//         opacity: 1,
+//         transition: {
+//             duration: 0.5,
+//             delay: delay,
+//         },
+//     },
+// });
 
 const Hero = () => {
 
@@ -55,11 +54,6 @@ const Hero = () => {
                 text="I am a Junior Software Developer with a passion for bringing ideas to life. Constantly staying updated on the latest trends and eager to contribute to innovative projects."
                 className="font-WorkSans text-MainLight text-lg md:text-2xl 4k:text-6xl text-center pt-6 px-8 md:px-96"
                 />
-                {/* <div className='flex flex-row justify-center items-center mx-auto pt-6 w-60'>
-                    <IoCaretDown className='text-MainLight text-2xl 4k:textp7xl text-center'/>
-                    <h3 className='cursor-pointer text-MainLight font-Anton uppercase text-2xl 4k:text-7xl text-center m-auto transition delay-50 duration-200 ease-in-out hover:scale-105'>Skip to projects</h3>
-                    <IoCaretDown className='text-MainLight text-2xl 4k:textp7xl text-center' />
-                </div> */}
             </div>
             <div className='4k:flex 4k:flex-col 4k:justify-center 4k:items-center 4k:mx-auto 4k:w-[33vw]'>
                 <ParallaxTechStack />
@@ -185,7 +179,7 @@ const ParallaxDescription = ({
     return (
         <motion.span
             className={className}
-            variants={animVariant2(0, initialPosition)}
+            variants={animVariant(0, initialPosition)}
             initial="hidden"
             whileInView="visible"
             viewport={{
