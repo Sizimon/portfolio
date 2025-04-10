@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FEAT: Comment out console.logs to remove console clutter.
+      FEAT: Make some styling test adjustments, FIX: Remove some console.logs
 
     PORTFOLIO:
 
