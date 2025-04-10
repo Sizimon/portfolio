@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FIX: Carousel ruining flow of modal
+      FIX: Carousel ruining flow of modal.
 
     PORTFOLIO:
 
