@@ -1,8 +1,8 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Attempt to fix modal inconsistencies on mobile.
 
     BOT-DASHBOARD:
+      FIX: Modal elements blocked by chrome UI bars on mobile.
 
     PORTFOLIO:
 
