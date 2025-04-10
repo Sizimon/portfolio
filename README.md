@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Edit interaction id query to grab game_id, not the new game_name.
+      FIX: Attempt to fix modal inconsistencies on mobile.
 
     BOT-DASHBOARD:
 
