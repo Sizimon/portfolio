@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FIX: Adjust positioning of the slider.
+      FIX: increase height of event modal on larger screens
 
     PORTFOLIO:
 
