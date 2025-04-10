@@ -1,9 +1,8 @@
 UPDATE:
     BOT-BACKEND:
-      FEAT: Extract both game_name and game_id from the gameDetails in order to be able to utilise game role name on frontend.
+      FIX: Edit interaction id query to grab game_id, not the new game_name.
 
     BOT-DASHBOARD:
-      FEAT: change game_name to game_id accordingly.
 
     PORTFOLIO:
 
