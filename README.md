@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FIX: Modal elements blocked by chrome UI bars on mobile.
+      FEAT: Test using a carousel instead of set amount of images.
 
     PORTFOLIO:
 
