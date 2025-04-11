@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Query error
+      FIX: Query error.
 
     BOT-DASHBOARD:
 
