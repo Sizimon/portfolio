@@ -1,9 +1,8 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Forgot to alter the saveGuildConfig to remove the color & icon properties.
 
     BOT-DASHBOARD:
-      
+      FEAT: Change banner to dynamic value.
 
     PORTFOLIO:
 
