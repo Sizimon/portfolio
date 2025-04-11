@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FIX: increase height of event modal on larger screens
+      FEAT: adjust some stylings for responsiveness.
 
     PORTFOLIO:
 
