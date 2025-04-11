@@ -2,7 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FEAT: adjust some stylings for responsiveness.
+      FEAT: adjust some stylings for responsiveness
 
     PORTFOLIO:
 
