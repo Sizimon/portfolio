@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-      FIX: Query error.
+      FIX: Change query to update from insert.
 
     BOT-DASHBOARD:
 
