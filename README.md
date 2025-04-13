@@ -2,8 +2,7 @@ UPDATE:
     BOT-BACKEND:
 
     BOT-DASHBOARD:
-      FEAT: Fixed some stylings. 
-      FEAT: Added highlighted link elements depending on the current page.
+      FIX: Replace was returning an empty string, so the path of '/' was not being read as it was technically ' '.
 
     PORTFOLIO:
 
