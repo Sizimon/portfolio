@@ -1,9 +1,9 @@
 UPDATE:
     BOT-BACKEND:
-      FEAT: Alter setup.js embed message to test if can use @prefix to actually call the role within discord. 
-      TEST: Check logs on createEvent to see why the times are being calculated incorrectly.
+      FIX: The timezone issue was caused by DST, which had effected the UTC offset of CEST. Switched to Area timezones for moment which should automatically account for DST.
 
     BOT-DASHBOARD:
+      FEAT: Add Favicon.
 
     PORTFOLIO:
 
