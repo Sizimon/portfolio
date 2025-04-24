@@ -6,5 +6,5 @@ UPDATE:
     PORTFOLIO:
 
     WEATHER-APP:
-      FEAT: Added night time icon to signify if the time has gone past the locations sunset time. 
-      FEAT: Created animation segments to incorporate effective UX which represents the humidity.
+      FEAT: Change wind animation. 
+      FEAT: Add icremental playback speed changes of animation depending on wind speed data.
