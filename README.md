@@ -6,4 +6,5 @@ UPDATE:
     PORTFOLIO:
 
     WEATHER-APP:
-      FEAT: Fixes to responsiveness.
+      FEAT: Altered night time animation. 
+      FEAT: Added clock for the searched location.
