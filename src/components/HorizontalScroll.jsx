@@ -170,7 +170,7 @@ const ProjectCard = ({
                                     src={image}
                                     alt=""
                                     onClick={() => handleImageClick(image)}
-                                    className="h-auto max-h-[300px] 4k:max-h-[2000px] w-auto max-w-full object-contain mx-auto scale-[90%] transition delay-75 duration-200 ease-in-out hover:scale-100" />
+                                    className="h-auto max-h-[300px] 4k:max-h-[2000px]    mx-auto scale-[90%] transition delay-75 duration-200 ease-in-out hover:scale-100" />
                             </div>
                         ))}
                     </Slider>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import HorizontalScroll from './HorizontalScroll';
+import CardStack from './CardStack';
 
 /* PROJECT SECTION LETTER EFFECT */
 
@@ -102,7 +103,8 @@ const Projects = () => {
             {/* END */}
 
             {/* HORIZONTAL SCROLL CARDS COMPONENT (MAIN PROJECTS SECTION) */}
-            <HorizontalScroll />
+            <CardStack />
+            {/* <HorizontalScroll /> */}
             {/* END */}
 
             <div
