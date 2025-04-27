@@ -21,20 +21,6 @@ const animVariant = (delay, initialPosition) => ({
         },
     },
 });
-// const animVariant2 = (delay, initialPosition) => ({
-//     hidden: {
-//         opacity: 0,
-//         x: initialPosition,
-//     },
-//     visible: {
-//         x: 0,
-//         opacity: 1,
-//         transition: {
-//             duration: 0.5,
-//             delay: delay,
-//         },
-//     },
-// });
 
 const Hero = () => {
 
@@ -145,8 +131,6 @@ const Typewriter = ({ subheading }) => {
     )
 }
 
-/* END */
-
 // ABOUT SECTION
 
 const ParallaxDescription = ({
@@ -193,8 +177,6 @@ const ParallaxDescription = ({
 }
 
 // END
-
-/* END */
 
 /* TECH STACK SECTION */
 
@@ -298,8 +280,6 @@ const ParallaxTechHeader = ({
         const updateAnimation = () => {
             const isMobile = window.matchMedia('(max-width: 768px)').matches;
             if (isMobile) {
-                console.log("Mobile");
-                console.log(initialPosition);
                 setInitialPosition({ x: 0, y: 100 }); // Smaller offset for mobile
             } else {
                 setInitialPosition({ x: 0, y: 100 }); // Larger offset for desktop

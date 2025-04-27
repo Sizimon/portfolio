@@ -2,9 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import Taskmanager_1 from '../assets/image/Taskmanager.png';
-import Taskmanager_2 from '../assets/image/Taskmanager_2.png';
-import Taskmanager_3 from '../assets/image/Taskmanager_3.png';
+import ProjectImages from "../images.js"
 import { FaGithub, FaGlobe } from "react-icons/fa6";
 
 import 'slick-carousel/slick/slick.css';
@@ -16,27 +14,29 @@ import './HorizontalScroll.css';
 const cards = [
     {
         id: 1,
-        title: 'InTimeTasks',
-        summary: 'A Full-Stack Task Manager Web App',
-        description: 'InTimeTasks is a Full-Stack Task Manager web app which allows users to create and manage tasks over any designated period of time. The app is built using React, Node.js, Express, and PostgtreSQL. \n \n The app allows users to create tasks, set deadlines, mark tasks as complete and other interesting features. The app also allows users to view tasks by day, week, or month. The app is fully responsive, can be used on any device and is hosted on Heroku.',
-        images: [Taskmanager_1, Taskmanager_2, Taskmanager_3],
-        github: ''
+        title: 'Gripendor Discord Bot',
+        summary: 'A Discord bot for managing and tracking guild activity in gaming communities.',
+        description: 'The Gripendor Bot is a Discord bot designed to streamline event management, role tracking, and attendance tracking within a Discord server. It integrates with a PostgreSQL database to store and retrieve data, and it provides a seamless user experience through Discord commands, buttons, and modals. The bot also integrates with Cloudinary for image management and offers a customizable dashboard for server administrators.',
+        images: [ProjectImages.gimg1, ProjectImages.gimg2, ProjectImages.gimg3],
+        livelink: 'https://szymonsamus.dev/bot-dashboard',
+        github: 'https://github.com/Sizimon/attendance-tracker/blob/main/README.md'
     },
     {
         id: 2,
-        title: 'GuildTracker Bot',
-        summary: 'Tool for tracking guild activity in MMORPG communities.',
-        images: [],
+        title: 'Task Manager',
+        summary: 'A simple task manager app for tracking tasks and projects.',
+        description: 'PLACEHOLDER TEXT',
+        images: [ProjectImages.timg1, ProjectImages.timg2, ProjectImages.timg3],
     },
     {
         id: 3,
         title: 'Weather Tracker',
-        summary: 'A simple weather tracking app',
-        images: [],
+        summary: 'A Weather Tracker web-app with a modern design.',
+        description: 'GuruWeather is a modern weather application built with React that provides real-time weather information for any location. It features a visually appealing interface with animations, dynamic backgrounds, and responsive design. The app uses the OpenWeatherMap API to fetch weather data and displays it in an intuitive and user-friendly way.',
+        images: [ProjectImages.wimg1, ProjectImages.wimg2, ProjectImages.wimg3],
+        livelink: 'https://szymonsamus.dev/weather-app'
     },
-]
-
-console.log("Cards data", cards);
+];
 
 /* END */
 
@@ -66,8 +66,8 @@ const HorizontalScroll = () => {
     });
 
     const x = useTransform(
-        scrollYProgress, 
-        [0, cards.length], 
+        scrollYProgress,
+        [0, cards.length],
         ["0%", `-${(cards.length - 1) * 100}%`]
     );
 
@@ -78,16 +78,10 @@ const HorizontalScroll = () => {
     const sectionHeight = `${100 * cards.length}vh`;
     // END
 
-    // useEffect(() => {
-    //     if (targetRef.current) {
-    //         console.log("Section height:", targetRef.current.offsetHeight);
-    //     }
-    // }, [targetRef]);
-
     return (
         <>
-            <section 
-                ref={targetRef} 
+            <section
+                ref={targetRef}
                 className='relative bg-MainDark'
                 style={{ height: sectionHeight }}
             >
@@ -96,7 +90,7 @@ const HorizontalScroll = () => {
                         {cards.map((card) => {
                             return (
                                 <motion.div key={card.id} className="w-[100vw] h-[90vh] xs:h-[80vh]">
-                                    <ProjectCard title={card.title} summary={card.summary} description={card.description} images={card.images} handleImageClick={handleImageClick} />
+                                    <ProjectCard title={card.title} summary={card.summary} description={card.description} images={card.images} livelink={card.livelink} github={card.github} handleImageClick={handleImageClick} />
                                 </motion.div>
                             )
                         })}
@@ -117,7 +111,7 @@ const HorizontalScroll = () => {
                         <motion.img
                             src={selectedImage}
                             alt='Full size'
-                            className='rounded-lg shadow-lg w-[80vw] h-[80vh] object-cover'
+                            className='rounded-lg shadow-lg w-[80vw] h-[80vh] object-contain'
                             initial={{ scale: 0.8 }}
                             animate={{ scale: 1 }}
                             exit={{ scale: 0.8 }}
@@ -137,7 +131,7 @@ const HorizontalScroll = () => {
 /* PROJECT CARD COMPONENT (MAPPED IN HORIZONTAL SECTION) */
 
 const ProjectCard = ({
-    title, description, id, summary, images, handleImageClick
+    title, description, id, summary, images, livelink, github, handleImageClick
 }) => {
     // SETTINGS FOR IMAGE CAROUSELS
     const settings = {
@@ -170,7 +164,7 @@ const ProjectCard = ({
                                     src={image}
                                     alt=""
                                     onClick={() => handleImageClick(image)}
-                                    className="h-auto max-h-[300px] 4k:max-h-[2000px]    mx-auto scale-[90%] transition delay-75 duration-200 ease-in-out hover:scale-100" />
+                                    className="h-auto max-h-[300px] 4k:max-h-[2000px] mx-auto scale-[90%] transition delay-75 duration-200 ease-in-out hover:scale-100" />
                             </div>
                         ))}
                     </Slider>
@@ -182,13 +176,27 @@ const ProjectCard = ({
                             className='flex flex-row p-1 gap-2 4k:gap-6  rounded-md text-MainDark bg-MainLight mr-5'
                         >
                             <FaGithub className="h-6 w-6 xs:h-8 xs:w-8 4k:h-24 4k:w-24 text-MainDark" />
-                            <p className="self-center text-xs xs:text-base 4k:text-5xl">GitHub</p>
+                            <a
+                                className="self-center text-xs xs:text-base 4k:text-5xl"
+                                href={github}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                GitHub
+                            </a>
                         </button>
                         <button
                             className='flex flex-row p-1 gap-2 4k:gap-6 rounded-md text-MainDark bg-MainLight ml-5'
                         >
                             <FaGlobe className="h-6 w-6 xs:h-8 xs:w-8 4k:h-24 4k:w-24 text-MainDark" />
-                            <p className="self-center text-xs xs:text-base 4k:text-5xl">View</p>
+                            <a
+                                className="self-center text-xs xs:text-base 4k:text-5xl"
+                                href={livelink}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                View Live
+                            </a>
                         </button>
                     </div>
                 </div>

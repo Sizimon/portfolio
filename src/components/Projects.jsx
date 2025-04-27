@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import HorizontalScroll from './HorizontalScroll';
 import CardStack from './CardStack';
@@ -69,49 +69,107 @@ const Projects = () => {
         return Math.floor(Math.random() * (max - min + 1) + min);
     };
 
-    return (
-        <>  
-            {/* PROJECTS HEADING TITLE / ANIMATION */}
-            <motion.div
-                className='relative w-full py-[2.5vh]'
-            >
+    const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1380); // Adjust the breakpoint as needed
+
+    useEffect(() => {
+            const handleResize = () => {
+                setIsLargeScreen(window.innerWidth > 1380); // Adjust the breakpoint as needed
+            };
+    
+            window.addEventListener('resize', handleResize);
+    
+            return () => {
+                window.removeEventListener('resize', handleResize);
+            };
+        }, []);
+    
+    if (isLargeScreen) {
+        return (
+            <>  
+                {/* PROJECTS HEADING TITLE / ANIMATION */}
                 <motion.div
-                    className='grid grid-cols-8 gap-2 w-full md:w-2/4 justify-center items-center mx-auto pb-0  px-8 md:px-0 z-10'
-                    variants={ProjectHeaderGridVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{
-                        once: true,
-                        margin: '-150px',
-                    }}
+                    className='relative w-full py-[2.5vh]'
                 >
-                    {/* This loops the array of letts and sets a random animation duration for each to create the "wiggly" effect. */}
-                    {['P', 'R', 'O', 'J', 'E', 'C', 'T', 'S'].map((letter, index) => {
-                        const animDuration = randomIntFromInterval(2, 6);
-                        return (
-                            <ProjectHeadingLetters
-                                key={index}
-                                variants={ProjectHeaderGridItems}
-                                className='text-MainDark text-4xl md:text-7xl 4k:text-9xl font-WorkSans'
-                                text={letter}
-                                duration={animDuration}
-                            />
-                        );
-                    })}
+                    <motion.div
+                        className='grid grid-cols-8 gap-2 w-full md:w-2/4 justify-center items-center mx-auto pb-0  px-8 md:px-0 z-10'
+                        variants={ProjectHeaderGridVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{
+                            once: true,
+                            margin: '-150px',
+                        }}
+                    >
+                        {/* This loops the array of letts and sets a random animation duration for each to create the "wiggly" effect. */}
+                        {['P', 'R', 'O', 'J', 'E', 'C', 'T', 'S'].map((letter, index) => {
+                            const animDuration = randomIntFromInterval(2, 6);
+                            return (
+                                <ProjectHeadingLetters
+                                    key={index}
+                                    variants={ProjectHeaderGridItems}
+                                    className='text-MainDark text-4xl md:text-7xl 4k:text-9xl font-WorkSans'
+                                    text={letter}
+                                    duration={animDuration}
+                                />
+                            );
+                        })}
+                    </motion.div>
                 </motion.div>
-            </motion.div>
-            {/* END */}
-
-            {/* HORIZONTAL SCROLL CARDS COMPONENT (MAIN PROJECTS SECTION) */}
-            <CardStack />
-            {/* <HorizontalScroll /> */}
-            {/* END */}
-
-            <div
-                className='bottom-0 left-0 right-0 h-[60vh] 4k:h-[40vh] bg-gradient-to-b from from-MainDark/0 to-MainDark/100'
-            />
-        </>
-    )
+                {/* END */}
+    
+                {/* Card Stack Component if on larger screens. */}
+                <CardStack />
+                
+    
+                <div
+                    className='bottom-0 left-0 right-0 h-[60vh] 4k:h-[40vh] bg-gradient-to-b from from-MainDark/0 to-MainDark/100'
+                />
+            </>
+        )
+    } else {
+        return (
+            <>  
+                {/* PROJECTS HEADING TITLE / ANIMATION */}
+                <motion.div
+                    className='relative w-full py-[2.5vh]'
+                >
+                    <motion.div
+                        className='grid grid-cols-8 gap-2 w-full md:w-2/4 justify-center items-center mx-auto pb-0  px-8 md:px-0 z-10'
+                        variants={ProjectHeaderGridVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{
+                            once: true,
+                            margin: '-150px',
+                        }}
+                    >
+                        {/* This loops the array of letts and sets a random animation duration for each to create the "wiggly" effect. */}
+                        {['P', 'R', 'O', 'J', 'E', 'C', 'T', 'S'].map((letter, index) => {
+                            const animDuration = randomIntFromInterval(2, 6);
+                            return (
+                                <ProjectHeadingLetters
+                                    key={index}
+                                    variants={ProjectHeaderGridItems}
+                                    className='text-MainDark text-4xl md:text-7xl 4k:text-9xl font-WorkSans'
+                                    text={letter}
+                                    duration={animDuration}
+                                />
+                            );
+                        })}
+                    </motion.div>
+                </motion.div>
+                {/* END */}
+    
+                {/* Horizontal Scroll Component if on Mobile device. */}
+                <HorizontalScroll />
+                
+    
+                <div
+                    className='bottom-0 left-0 right-0 h-[60vh] 4k:h-[40vh] bg-gradient-to-b from from-MainDark/0 to-MainDark/100'
+                />
+            </>
+        )
+    }
 }
 
 export default Projects;

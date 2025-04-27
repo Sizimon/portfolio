@@ -6,6 +6,7 @@ import { FaGithub, FaGlobe } from "react-icons/fa6";
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './CardStack.css';
 
 const cards = [
     {
@@ -14,7 +15,8 @@ const cards = [
         summary: 'A Discord bot for managing and tracking guild activity in gaming communities.',
         description: 'The Gripendor Bot is a Discord bot designed to streamline event management, role tracking, and attendance tracking within a Discord server. It integrates with a PostgreSQL database to store and retrieve data, and it provides a seamless user experience through Discord commands, buttons, and modals. The bot also integrates with Cloudinary for image management and offers a customizable dashboard for server administrators.',
         images: [ProjectImages.gimg1, ProjectImages.gimg2, ProjectImages.gimg3],
-        livelink: 'https://szymonsamus.dev/bot-dashboard'
+        livelink: 'https://szymonsamus.dev/bot-dashboard',
+        github: 'https://github.com/Sizimon/attendance-tracker/blob/main/README.md'
     },
     {
         id: 2,
@@ -26,7 +28,7 @@ const cards = [
     {
         id: 3,
         title: 'Weather Tracker',
-        summary: 'A simple weather tracking app',
+        summary: 'A Weather Tracker web-app with a modern design.',
         description: 'GuruWeather is a modern weather application built with React that provides real-time weather information for any location. It features a visually appealing interface with animations, dynamic backgrounds, and responsive design. The app uses the OpenWeatherMap API to fetch weather data and displays it in an intuitive and user-friendly way.',
         images: [ProjectImages.wimg1, ProjectImages.wimg2, ProjectImages.wimg3],
         livelink: 'https://szymonsamus.dev/weather-app'
@@ -38,21 +40,15 @@ const CardStack = () => {
     const [isHovering, setIsHovering] = useState(false);
     const containerRef = useRef(null);
 
-    // For touch gestures
-    const touchStartY = useRef(0);
-    const touchEndY = useRef(0);
-
     // For image modal
     const [selectedImage, setSelectedImage] = useState(null);
 
     const handleImageClick = (image) => {
-        console.log("Image clicked:", image);
         setSelectedImage(image);
         document.body.classList.add('no-scroll');
     };
 
     const handleImageClose = () => {
-        console.log("Modal closed");
         setSelectedImage(null);
         document.body.classList.remove('no-scroll');
     };
@@ -82,45 +78,13 @@ const CardStack = () => {
             }
         };
 
-        const handleTouchStart = (event) => {
-            touchStartY.current = event.touches[0].clientY; // Record the starting Y position
-        };
-
-        const handleTouchMove = (event) => {
-            touchEndY.current = event.touches[0].clientY; // Update the ending Y position
-        };
-
-        const handleTouchEnd = () => {
-            const swipeDistance = touchStartY.current - touchEndY.current;
-
-            const threshold = 50; // Minimum swipe distance to trigger a card change
-
-            if (swipeDistance > threshold && currentCard < cards.length - 1) {
-                // Swipe up
-                setCurrentCard((prev) => prev + 1);
-            } else if (swipeDistance < -threshold && currentCard > 0) {
-                // Swipe down
-                setCurrentCard((prev) => prev - 1);
-            }
-
-            // Reset touch positions
-            touchStartY.current = 0;
-            touchEndY.current = 0;
-        };
-
         const container = containerRef.current;
-        // Add event listeners for both wheel and touch
+        // Add event listener for wheel scroll
         container.addEventListener('wheel', handleWheel, { passive: false });
-        container.addEventListener('touchstart', handleTouchStart, { passive: true });
-        container.addEventListener('touchmove', handleTouchMove, { passive: true });
-        container.addEventListener('touchend', handleTouchEnd, { passive: true });
 
         return () => {
             // Cleanup event listeners
             container.removeEventListener('wheel', handleWheel);
-            container.removeEventListener('touchstart', handleTouchStart);
-            container.removeEventListener('touchmove', handleTouchMove);
-            container.removeEventListener('touchend', handleTouchEnd);
         };
     }, [currentCard, isHovering]);
 
@@ -180,7 +144,14 @@ const CardStack = () => {
                                                 className='flex flex-row p-1 gap-2 4k:gap-6  rounded-md text-MainDark bg-MainLight mr-5'
                                             >
                                                 <FaGithub className="h-6 w-6 xs:h-8 xs:w-8 4k:h-24 4k:w-24 text-MainDark" />
-                                                <p className="self-center text-xs xs:text-base 4k:text-5xl">GitHub</p>
+                                                <a
+                                                    className="self-center text-xs xs:text-base 4k:text-5xl"
+                                                    href={card.github}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    GitHub
+                                                </a>
                                             </button>
                                             <button
                                                 className='flex flex-row p-1 gap-2 4k:gap-6 rounded-md text-MainDark bg-MainLight ml-5'
@@ -190,6 +161,7 @@ const CardStack = () => {
                                                     className="self-center text-xs xs:text-base 4k:text-5xl"
                                                     href={card.livelink}
                                                     target="_blank"
+                                                    rel="noreferrer"
                                                 >
                                                     View Live
                                                 </a>
@@ -230,6 +202,5 @@ const CardStack = () => {
         </>
     )
 };
-
 
 export default CardStack;
