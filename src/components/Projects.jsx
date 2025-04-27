@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import HorizontalScroll from './HorizontalScroll';
-import CardStack from './CardStack';
+import HorizontalScroll from './HorizontalScrollComponents/HorizontalScroll';
+import CardStack from './CardStackComponents/CardStack';
 
 /* PROJECT SECTION LETTER EFFECT */
 

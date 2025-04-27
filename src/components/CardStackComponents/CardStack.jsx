@@ -1,69 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import ProjectImages from '../images.js';
-import Slider from "react-slick";
+import { motion } from 'framer-motion';
 import { FaGithub, FaGlobe } from "react-icons/fa6";
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import './CardStack.css';
+import cards from '../cards.js'; // Import the cards array from cards.js
+import ImageSlider from '../ImageComponents/ImageSlider.jsx';
+import ImageModal from '../ImageComponents/ImageModal.jsx';
 
-const cards = [
-    {
-        id: 1,
-        title: 'Gripendor Discord Bot',
-        summary: 'A Discord bot for managing and tracking guild activity in gaming communities.',
-        description: 'The Gripendor Bot is a Discord bot designed to streamline event management, role tracking, and attendance tracking within a Discord server. It integrates with a PostgreSQL database to store and retrieve data, and it provides a seamless user experience through Discord commands, buttons, and modals. The bot also integrates with Cloudinary for image management and offers a customizable dashboard for server administrators.',
-        images: [ProjectImages.gimg1, ProjectImages.gimg2, ProjectImages.gimg3],
-        livelink: 'https://szymonsamus.dev/bot-dashboard',
-        github: 'https://github.com/Sizimon/attendance-tracker/blob/main/README.md'
-    },
-    {
-        id: 2,
-        title: 'Task Manager',
-        summary: 'A simple task manager app for tracking tasks and projects.',
-        description: 'PLACEHOLDER TEXT',
-        images: [ProjectImages.timg1, ProjectImages.timg2, ProjectImages.timg3],
-    },
-    {
-        id: 3,
-        title: 'Weather Tracker',
-        summary: 'A Weather Tracker web-app with a modern design.',
-        description: 'GuruWeather is a modern weather application built with React that provides real-time weather information for any location. It features a visually appealing interface with animations, dynamic backgrounds, and responsive design. The app uses the OpenWeatherMap API to fetch weather data and displays it in an intuitive and user-friendly way.',
-        images: [ProjectImages.wimg1, ProjectImages.wimg2, ProjectImages.wimg3],
-        livelink: 'https://szymonsamus.dev/weather-app'
-    },
-];
+import './CardStack.css'; // Import the CSS file for styling
+
 
 const CardStack = () => {
     const [currentCard, setCurrentCard] = useState(0);
     const [isHovering, setIsHovering] = useState(false);
     const containerRef = useRef(null);
 
-    // For image modal
     const [selectedImage, setSelectedImage] = useState(null);
-
-    const handleImageClick = (image) => {
-        setSelectedImage(image);
-        document.body.classList.add('no-scroll');
-    };
-
-    const handleImageClose = () => {
-        setSelectedImage(null);
-        document.body.classList.remove('no-scroll');
-    };
-
-    // Slider settings
-    const settings = {
-        arrows: false,
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-    }
 
     useEffect(() => {
         const handleWheel = (event) => {
@@ -125,17 +76,7 @@ const CardStack = () => {
                                 </div>
                                 <div className="grid grid-cols-1 pt-0">
                                     <div className="mx-auto py-6 w-1/2 justify-center items-center">
-                                        <Slider {...settings}>
-                                            {card.images.map((image, index) => (
-                                                <div key={index}>
-                                                    <img
-                                                        src={image}
-                                                        alt=""
-                                                        onClick={() => handleImageClick(image)}
-                                                        className="h-auto max-h-[200px] 4k:max-h-[2000px] mx-auto scale-[90%] transition delay-75 duration-200 ease-in-out hover:scale-100" />
-                                                </div>
-                                            ))}
-                                        </Slider>
+                                        <ImageSlider images={card.images} setSelectedImage={setSelectedImage} />
                                     </div>
                                     <div className="m-auto px-2 md:px-6 bp:px-[20%] bp:py-[5%] ap:px-6 ap:py-0">
                                         <p className='text-center text-MainLight font-WorkSans text-[10px] xs:text-sm md:text-base 4k:text-5xl'>{card.description}</p>
@@ -175,30 +116,8 @@ const CardStack = () => {
                 </div>
             </div>
 
-            {/* IMAGE MODALS */}
-            <AnimatePresence>
-                {selectedImage && (
-                    <motion.div
-                        className='fixed inset-0 flex items-center justify-center bg-MainDark bg-opacity-75 z-50'
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        onClick={handleImageClose}
-                    >
-                        <motion.img
-                            src={selectedImage}
-                            alt='Full size'
-                            className='rounded-lg shadow-lg w-[90vw] h-[90vh] object-contain'
-                            initial={{ scale: 0.8 }}
-                            animate={{ scale: 1 }}
-                            exit={{ scale: 0.8 }}
-                        >
-
-                        </motion.img>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-            {/* END IMAGE MODALS */}
+            {/* Hidden unless image clicked */}
+            <ImageModal selectedImage={selectedImage} setSelectedImage={setSelectedImage} />
         </>
     )
 };

@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { SmoothScroll } from './components/SmoothScroll'
+import { Portfolio } from './components/Portfolio'
 
 function App() {
   return (
     <div className='bg-MainDark'>
-      <SmoothScroll />
+      <Portfolio />
     </div>
   )
 }
