@@ -22,7 +22,7 @@ const HeroTypewriter = ({ subheading }) => {
 
     return (
         <h2
-            className='text-MainLight font-Anton uppercase text-3xl 4k:text-9xl md:text-5xl text-center m-auto'
+            className='text-MainLight font-Anton uppercase text-3xl md:text-5xl 4k:text-9xl text-center m-auto'
         >
             {subheading[currentSubHeading].split('').map((letter, index) => {
                 return (

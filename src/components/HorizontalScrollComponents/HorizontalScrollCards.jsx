@@ -19,8 +19,8 @@ const HorizontalScrollCards = ({
                 <div className="m-auto p-4 pb-12 md:px-6 md:pb-10 w-full justify-center items-center">
                     <ImageSlider images={images} setSelectedImage={setSelectedImage} />
                 </div>
-                <div className="m-auto px-2 md:px-6 bp:px-[20%] bp:py-[5%] ap:px-6 ap:py-0">
-                    <p className='text-MainLight font-WorkSans text-[10px] xs:text-sm md:text-xl 4k:text-5xl'>{description}</p>
+                <div className="m-auto px-12 bp:px-40 bp:py-[5%]">
+                    <p className='text-MainLight text-center font-WorkSans text-[10px] xs:text-sm md:text-xl 4k:text-5xl'>{description}</p>
                     <div className='flex flex-row justify-center pt-10 4k:pt-[5vh] md:pt-4 text-center'>
                         <button
                             className='flex flex-row p-1 gap-2 4k:gap-6  rounded-md text-MainDark bg-MainLight mr-5'
