@@ -8,7 +8,7 @@ UPDATE:
     WEATHER-APP:
 
     ITT-DASHBOARD:
-        Build project to check if static file has issues.
+        Change build index.html to include correct static file routing
 
     ITT-BACKEND:
 
