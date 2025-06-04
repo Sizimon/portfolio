@@ -8,7 +8,7 @@ UPDATE:
     WEATHER-APP:
 
     ITT-DASHBOARD:
-        Add Homepage property to package.json
+        Try copilot suggested fix.
 
     ITT-BACKEND:
 
