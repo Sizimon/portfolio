@@ -7,6 +7,11 @@ UPDATE:
       
     WEATHER-APP:
 
+    ITT-DASHBOARD:
+        Build project to check if static file has issues.
+
+    ITT-BACKEND:
+
     MISC:
-     Editted docker-compose in EC2 instance to accomodate for changes.
+     
       
