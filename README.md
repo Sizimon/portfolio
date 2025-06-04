@@ -8,7 +8,7 @@ UPDATE:
     WEATHER-APP:
 
     ITT-DASHBOARD:
-        Try copilot suggested fix.
+        Fix CRA / Tailwind V4 clashing with CSS files.
 
     ITT-BACKEND:
 
