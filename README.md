@@ -1,5 +1,6 @@
 UPDATE:
     BOT-BACKEND:
+        Attempting to isolate bug for discord bot.
 
     BOT-DASHBOARD:
 
@@ -8,5 +9,4 @@ UPDATE:
     WEATHER-APP:
 
     MISC:
-     Site went offline for unknown reasons, attempting reset.
       
