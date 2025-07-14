@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-        Attempting to isolate bug for discord bot.
+        Attempting to isolate bug for discord bot. (ADDED LOGGING)
 
     BOT-DASHBOARD:
 
@@ -13,5 +13,4 @@ UPDATE:
     ITT-BACKEND:
 
     MISC:
-        PULL LATEST PORTFOLIO VERSION
       
