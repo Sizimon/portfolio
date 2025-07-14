@@ -42,7 +42,7 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
-      - /home/ec2-user/portfolio/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - /home/ec2-user/portfolio/updatedinit.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
       interval: 10s
@@ -58,5 +58,50 @@ services:
       - .env
     ports:
       - "5004:5000"
+
+  itt-dashboard:
+    image: shhmon/itt-dashboard:latest
+    container_name: itt-dashboard
+    ports:
+      - "5005:5000"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - itt-backend
+      - itt-database
+
+  itt-backend:
+    image: shhmon/itt-backend:latest
+    container_name: itt-backend
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_HOST=itt-database
+      - DB_NAME=${DB_NAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_PORT=5432
+      - SECRET_KEY=${SECRET_KEY}
+    ports:
+      - "5006:5006"
+    depends_on:
+      itt-database:
+        condition: service_healthy
+
+  itt-database:
+    image: postgres:13
+    container_name: itt-database
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - /home/ec2-user/PORTFOLIO-REACT/ITT-init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 volumes:
   pgdata:
