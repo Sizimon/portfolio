@@ -47,7 +47,7 @@ services:
       test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
       interval: 10s
       timeout: 5s
-      retries: 5
+      retries: 3
   
   weather-app:
     image: shhmon/weather-api:latest
@@ -102,6 +102,6 @@ services:
       test: [ "CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}" ]
       interval: 10s
       timeout: 5s
-      retries: 5
+      retries: 3
 volumes:
   pgdata:
