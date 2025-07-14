@@ -1,6 +1,6 @@
 UPDATE:
     BOT-BACKEND:
-        Attempting to isolate bug for discord bot. (ADDED LOGGING)
+        Attempting to isolate bug for discord bot.
 
     BOT-DASHBOARD:
 
