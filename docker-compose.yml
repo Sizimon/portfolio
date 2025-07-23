@@ -61,7 +61,7 @@ services:
 
   noto-frontend:
     image: shhmon/noto-frontend:latest
-    container_name: noto-frontend
+    container_name: noto
     ports:
       - "5005:5000"
     environment:

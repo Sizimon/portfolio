@@ -29,7 +29,8 @@ jobs:
         run: |
           ssh -i ec2-key.pem -o StrictHostKeyChecking=no ec2-user@${{ secrets.EC2_IP }} "
           cd /home/ec2-user/portfolio &&
-          echo 'TEST_GUILD_ID=1306969550851407912' > .env &&
+          echo 'NEXT_PUBLIC_API_BASE_URL=https://szymonsamus.dev/noto-backend/api' > .env &&
+          echo 'TEST_GUILD_ID=1306969550851407912' >> .env &&
           echo 'DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN }}' >> .env &&
           echo 'CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}' >> .env &&
           echo 'CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}' >> .env &&
