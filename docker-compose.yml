@@ -41,7 +41,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - bot_db_volume:/var/lib/postgresql/data
       - /home/ec2-user/portfolio/updatedinit.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
@@ -59,23 +59,23 @@ services:
     ports:
       - "5004:5000"
 
-  itt-dashboard:
-    image: shhmon/itt-dashboard:latest
-    container_name: itt-dashboard
+  noto-frontend:
+    image: shhmon/noto-frontend:latest
+    container_name: noto-frontend
     ports:
       - "5005:5000"
     environment:
       - NODE_ENV=production
     depends_on:
-      - itt-backend
-      - itt-database
+      - noto-backend
+      - noto-database
 
-  itt-backend:
-    image: shhmon/itt-backend:latest
-    container_name: itt-backend
+  noto-backend:
+    image: shhmon/noto-backend:latest
+    container_name: noto-backend
     environment:
       - DB_USER=${DB_USER}
-      - DB_HOST=itt-database
+      - DB_HOST=noto-database
       - DB_NAME=${DB_NAME}
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_PORT=5432
@@ -86,9 +86,9 @@ services:
       itt-database:
         condition: service_healthy
 
-  itt-database:
+  noto-database:
     image: postgres:13
-    container_name: itt-database
+    container_name: noto-database
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
@@ -96,8 +96,8 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data
-      - /home/ec2-user/portfolio/ITT-init.sql:/docker-entrypoint-initdb.d/init.sql
+      - noto_db_volume:/var/lib/postgresql/data
+      - /home/ec2-user/portfolio/Noto-init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}" ]
       interval: 10s
