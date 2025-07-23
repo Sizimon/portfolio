@@ -104,4 +104,5 @@ services:
       timeout: 5s
       retries: 3
 volumes:
-  pgdata:
+  bot_db_volume:
+  noto_db_volume:
