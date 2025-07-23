@@ -8,7 +8,7 @@ UPDATE:
     WEATHER-APP:
 
     NOTO-FRONTEND:
-        Attempt to fix incorrectly handled CSS.
+        FIX: Redirect issues attempted fix.
 
     NOTO-BACKEND:
 
