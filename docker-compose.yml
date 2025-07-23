@@ -83,7 +83,7 @@ services:
     ports:
       - "5006:5006"
     depends_on:
-      itt-database:
+      noto-database:
         condition: service_healthy
 
   noto-database:
