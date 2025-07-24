@@ -8,9 +8,10 @@ UPDATE:
     WEATHER-APP:
 
     NOTO-FRONTEND:
-        FIX: Continuing fix attempts
+        FEAT: Render landing page as root.
 
     NOTO-BACKEND:
+        FIX: Rename env var for JWT.
 
     MISC:
       
