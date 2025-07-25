@@ -8,10 +8,9 @@ UPDATE:
     WEATHER-APP:
 
     NOTO-FRONTEND:
-        FEAT: Render landing page as root.
+        FIX: Change next.config
 
     NOTO-BACKEND:
-        FIX: Rename env var for JWT.
 
     MISC:
       
