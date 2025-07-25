@@ -8,7 +8,7 @@ UPDATE:
     WEATHER-APP:
 
     NOTO-FRONTEND:
-        FIX: Change next.config
+        FIX: Change hardcoded redirect in API response to include basePAth
 
     NOTO-BACKEND:
 
