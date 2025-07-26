@@ -42,8 +42,11 @@ jobs:
           echo 'DB_NAME=${{ secrets.DB_NAME }}' >> .env &&
           echo 'DB_PASSWORD=${{ secrets.DB_PASSWORD }}' >> .env &&
           echo 'DB_PORT=${{ secrets.DB_PORT }}' >> .env &&
+          echo 'NOTO_DB_USER=${{ secrets.DB_USER }}' >> .env &&
+          echo 'NOTO_DB_PASSWORD=${{ secrets.DB_PASSWORD }}' >> .env &&
           echo 'NOTO_DB_HOST=${{ secrets.NOTO_DB_HOST }}' >> .env &&
           echo 'NOTO_DB_NAME=${{ secrets.NOTO_DB_NAME }}' >> .env &&
+          echo 'NOTO_DB_PORT=${{ secrets.DB_PORT }}' >> .env &&
           echo 'REACT_APP_WEATHER_API_KEY=${{ secrets.REACT_APP_WEATHER_API_KEY }}' >> .env &&
           docker-compose down &&
           docker system prune -af &&
