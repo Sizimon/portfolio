@@ -8,9 +8,9 @@ UPDATE:
     WEATHER-APP:
 
     NOTO-FRONTEND:
-        FIX: Change hardcoded redirect in API response to include basePAth
 
     NOTO-BACKEND:
+        FIX: Trust only first proxy 'nginx'
 
     MISC:
       

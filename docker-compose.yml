@@ -75,8 +75,8 @@ services:
     container_name: noto-backend
     environment:
       - DB_USER=${DB_USER}
-      - DB_HOST=noto-database
-      - DB_NAME=${DB_NAME}
+      - DB_HOST=${NOTO_DB_HOST}
+      - DB_NAME=${NOTO_DB_NAME}
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_PORT=5432
       - SECRET_KEY=${SECRET_KEY}
@@ -92,14 +92,14 @@ services:
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
-      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_DB=${NOTO_DB_NAME}
     ports:
       - "5433:5432"
     volumes:
       - noto_db_volume:/var/lib/postgresql/data
       - /home/ec2-user/portfolio/Noto-init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}" ]
+      test: [ "CMD-SHELL", "pg_isready -U ${DB_USER} -d ${NOTO_DB_NAME}" ]
       interval: 10s
       timeout: 5s
       retries: 3
