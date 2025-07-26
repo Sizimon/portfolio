@@ -8,10 +8,9 @@ UPDATE:
     WEATHER-APP:
 
     NOTO-FRONTEND:
-        FEAT: Display serverside error rathen than a generic set error.
+        FIX: Attempt to fix infinite redirect on initial load.
 
     NOTO-BACKEND:
-        FEAT: Pass port value differently in DB connection.
 
     MISC:
       
