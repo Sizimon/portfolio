@@ -8,9 +8,10 @@ UPDATE:
     WEATHER-APP:
 
     NOTO-FRONTEND:
+        FEAT: Display serverside error rathen than a generic set error.
 
     NOTO-BACKEND:
-        FIX: Trust only first proxy 'nginx'
+        FEAT: Pass port value differently in DB connection.
 
     MISC:
       
