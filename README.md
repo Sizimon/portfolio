@@ -8,7 +8,7 @@ UPDATE:
     WEATHER-APP:
 
     NOTO-FRONTEND:
-        FEAT: Replace Favicon, refactor h-screen classes to h-dvh instead to accomodate mobile screens
+        FEAT: Alter dvh to lvh to see if that ensures a smoother mobile scroll. Change 'code' size in ProseMirror.
 
     NOTO-BACKEND:
 
