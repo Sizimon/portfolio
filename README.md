@@ -8,7 +8,7 @@ UPDATE:
     WEATHER-APP:
 
     NOTO-FRONTEND:
-        FIX: Attempt to fix infinite redirect on initial load.
+        FEAT: Replace Favicon, refactor h-screen classes to h-dvh instead to accomodate mobile screens
 
     NOTO-BACKEND:
 
