@@ -159,7 +159,7 @@ const Projects = () => {
                                 }}
                             />
                             {/* Overlay for preview which darkens image if not hovered */}
-                            <div className={`absolute inset-0 transition-all duration-500 ${hovered === idx ? "bg-black/30" : "bg-black/60"}`} />
+                            <div className={`absolute inset-0 transition-all duration-500 ${hovered === idx ? "bg-black/70" : "bg-black/60"}`} />
                             {/* Preview content */}
                             <div className={`relative z-10 flex flex-col justify-center items-center h-full text-white px-4 ${hovered === idx ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
                                 <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
